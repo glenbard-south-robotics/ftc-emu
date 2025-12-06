@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["library/ftc-emu-core"]
+members = ["ftc-emu","library/ftc-emu-core"]
 
 [workspace.dependencies]
 
