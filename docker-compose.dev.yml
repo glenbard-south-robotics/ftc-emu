@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   rust-watch:
     build:
@@ -9,7 +7,6 @@ services:
       - .:/workspace
     command: >
       sh -c "
-      cd /workspace &&
       cargo watch -p ftc-emu-core -s 'wasm-pack build library/ftc-emu-core --target web --out-dir ../../ftc-emu-www/pkg --dev'
       "
     tty: true
@@ -22,7 +19,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./ftc-emu-www:/web
-      - ./library/ftc-emu-core/pkg:/web/pkg
+      - ./ftc-emu-www/pkg:/web/pkg
     ports:
       - "5173:5173"
     command: npm run dev
