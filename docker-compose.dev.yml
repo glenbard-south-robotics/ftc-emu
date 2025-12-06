@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  rust-watch:
+    build:
+      context: .
+      dockerfile: library/Dockerfile
+    volumes:
+      - .:/workspace
+    command: >
+      sh -c "
+      cd /workspace &&
+      cargo watch -p ftc-emu-core -s 'wasm-pack build library/ftc-emu-core --target web --dev'
+      "
+    tty: true
+    environment:
+      - CARGO_TERM_COLOR=always
