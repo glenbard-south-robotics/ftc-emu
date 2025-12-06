@@ -1,2 +1,3 @@
 **/target/
 /library/fmt-emu-core/pkg/
+/ftc-emu-www/node_modules/
