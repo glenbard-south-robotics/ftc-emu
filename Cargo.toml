@@ -1,9 +1,10 @@
 [workspace]
 resolver = "3"
-members = ["app/src-tauri","library/ftc-emu-core"]
+members = ["library/ftc-emu-types","library/ftc-emu-core", "ftc-emu"]
 
 [workspace.dependencies]
 ftc-emu-core = { path = "library/ftc-emu-core"}
+ftc-emu-types = { path = "library/ftc-emu-types"}
 
 [workspace.lints.clippy]
 all = { level = "warn", priority = -1 }

@@ -1,0 +1,9 @@
+[package]
+name = "ftc-emu-core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ftc-emu-types = { workspace = true }
+[lints]
+workspace = true
